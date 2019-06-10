@@ -43,3 +43,4 @@ def set_cookie_str(name, value = "", expiration = None, path = None, domain = No
     return cookie_str
 
 
+print(get_cookies())
