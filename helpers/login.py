@@ -1,5 +1,4 @@
 #Verifies  username/password combination. Reads from file accounts.csv.
-
 import csv
 
 def signIn(username, password):
