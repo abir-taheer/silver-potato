@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+# Returns the html code for a standard MDL Button with ripple effect and the given attributes/classes/innerText
 def new_standard_button(text, classes = ["mdl-button--raised", "mdl-button--colored", "mdl-js-ripple-effect"], attributes = {}):
 	button = "<button class='mdl-button mdl-js-button "+ " ".join(classes) +"' "
 	for attr in attributes:
@@ -8,6 +9,8 @@ def new_standard_button(text, classes = ["mdl-button--raised", "mdl-button--colo
 	return button
 
 
+# Returns the html code for a standard MDL card
+# Allows for direct html input into the title, content, and bottom areas, or the exlusion of any of these
 def new_standard_card(title =None, content = None, bottom = None):
 	card =  '<div class="mdl-card mdl-shadow--2dp">'
 	if title is not None:
@@ -31,6 +34,10 @@ def new_standard_card(title =None, content = None, bottom = None):
 	card += "</div>"
 	return card
 
+
+# Allows for the quicker creation of an MDL table
+# headers is a list of the headings that will be the column labels for the table
+# rows is a list of list; the data for each row of the table
 def new_table(headers = [], rows = []):
 	headings = "<tr>"
 	for heading in headers:
@@ -56,8 +63,10 @@ def new_table(headers = [], rows = []):
 	</table>
 	"""
 
-def new_text_input(label, name):
+
+# Returns the html code to create a new text input field
+def new_text_input(label, name, value = ""):
 	return """<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" name='""" + name + """'>
+    <input class="mdl-textfield__input" type="text" name='""" + name + """' value='""" + name + """'>
     <label class="mdl-textfield__label" >"""+ label +"""</label>
   </div>"""
