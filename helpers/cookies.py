@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import os
+import random
 from datetime import datetime as datetime
 from urllib.parse import unquote_plus as uri_decode
 from urllib.parse import quote as uri_encode
@@ -37,3 +38,22 @@ def set_cookie_str(name, value = "", expiration = None, path = None, domain = No
     if httponly:
         cookie_str += " httponly;"
     return cookie_str
+
+
+def random_str(length, lowercase_letters = True, uppercase_letters = False, numbers = True):
+	allowed = ""
+	str = ""
+
+	if lowercase_letters:
+		allowed += "abcdefghijklmnopqrstuvwxyz"
+
+	if uppercase_letters:
+		allowed += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+	if numbers:
+		allowed += "1234567890"
+
+	for x in range(length):
+		str += allowed[random.randrange(len(allowed))]
+
+	return str

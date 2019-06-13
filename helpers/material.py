@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # Returns the html code for a standard MDL Button with ripple effect and the given attributes/classes/innerText
-def new_standard_button(text, classes = ["mdl-button--raised", "mdl-button--colored", "mdl-js-ripple-effect"], attributes = {}):
+def new_standard_button(text,  attributes = {}, classes = ["mdl-button--raised", "mdl-button--colored", "mdl-js-ripple-effect"]):
 	button = "<button class='mdl-button mdl-js-button "+ " ".join(classes) +"' "
 	for attr in attributes:
 		button += str(attr) + "='" + attributes[attr] + "' "
@@ -65,8 +65,8 @@ def new_table(headers = [], rows = []):
 
 
 # Returns the html code to create a new text input field
-def new_text_input(label, name, value = ""):
+def new_text_input(label, name, value = "", type="text"):
 	return """<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" name='""" + name + """' value='""" + name + """'>
+    <input class="mdl-textfield__input" name='""" + name + """' value='""" + value + """' type='""" + type + """'>
     <label class="mdl-textfield__label" >"""+ label +"""</label>
   </div>"""

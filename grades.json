@@ -5,6 +5,12 @@
           "grade": 4,
           "max_points": 4,
           "type": "hw"
-      }
+      },
+	  {
+		  "name":"HW62",
+		  "grade": 3,
+		  "max_points": 4,
+		  "type": "hw"
+	  }
   ]
 }
