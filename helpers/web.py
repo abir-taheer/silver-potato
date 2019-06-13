@@ -3,7 +3,7 @@
 template = open("template.txt").read()
 body = ""
 head = ""
-http_headers = ""
+http_headers = "Content-Type: text/html\n"
 
 
 def add_body(content):
@@ -23,3 +23,6 @@ def send_content():
 	global head
 	print(http_headers)
 	print(template.replace("<!--Head_Content-->", head).replace("<!--Body_Content-->", body))
+
+def center_content(content):
+	return "<div class='ctr-obj'>" + content + "</div>"
