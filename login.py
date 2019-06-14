@@ -13,7 +13,8 @@ print("Content-Type: text/html")
 
 if session.is_signed_in():
 	print("")
-	print("You are already signed in as "+ session.get_user_id() + " !")
+	print("You are already signed in as "+ session.get_user_id() + " ! Redirecting you back in 5 seconds...")
+	print('<meta http-equiv="refresh" content="5; url=./profile.py">')
 	exit()
 
 
@@ -36,7 +37,10 @@ if form.form("username") in users and users[form.form("username")]["password"] =
 	print(cookies.set_cookie_str("session", session_token, expires))
 	print("")
 
-	print("Success! You are now logged in until " + expires_string + "!")
+	print("Success! You are now logged in for 24 hours! Redirecting you back in 5 seconds...")
+	print('<meta http-equiv="refresh" content="5; url=./profile.py">')
+
 
 else:
-	print("Error, invalid credentials")
+	print("Error, invalid credentials. Redirecting you back in 5 seconds...")
+	print('<meta http-equiv="refresh" content="5; url=./profile.py">')

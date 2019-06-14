@@ -1,8 +1,9 @@
 import cgi
 
 form_fields = {}
+data = cgi.FieldStorage()
 def update_post():
-    data = cgi.FieldStorage()
+    global data
     for x in data:
         form_fields[x] = data[x].value
 

@@ -6,7 +6,8 @@ import json
 print("Content-Type: text/html\n")
 
 if not session.is_signed_in():
-	print("You are not signed in")
+	print("You are not signed in! Redirecting you back in 5 seconds...")
+	print('<meta http-equiv="refresh" content="5; url=./profile.py">')
 	exit()
 
 
@@ -21,4 +22,5 @@ if form.form("preferred_name") is not None:
 # Save the data
 open("users.json", "w").write(json.dumps(users))
 
-print("Your updates have been stored!")
+print("Your updates have been stored! Redirecting you back in 5 seconds...")
+print('<meta http-equiv="refresh" content="5; url=./profile.py">')
