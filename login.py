@@ -7,8 +7,6 @@ import hashlib
 import datetime
 import cgitb
 
-cgitb.enable()
-
 print("Content-Type: text/html")
 
 if session.is_signed_in():
@@ -21,7 +19,7 @@ if session.is_signed_in():
 users = json.loads(open("users.json").read())
 
 
-if form.form("username") in users and users[form.form("username")]["password"] == str(hashlib.sha256(form.form("password").encode("utf-8")).hexdigest()):
+if  form.form("username") in users and users[form.form("username")]["password"] == str(hashlib.sha256(form.form("password").encode("utf-8")).hexdigest()):
 	expires = datetime.datetime.now()
 	expires = expires + datetime.timedelta(hours = 24)
 	expires_string = expires.strftime("%Y,%m,%d,%H,%M,%S")
@@ -42,5 +40,6 @@ if form.form("username") in users and users[form.form("username")]["password"] =
 
 
 else:
+	print("")
 	print("Error, invalid credentials. Redirecting you back in 5 seconds...")
 	print('<meta http-equiv="refresh" content="5; url=./profile.py">')

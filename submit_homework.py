@@ -10,8 +10,8 @@ homework_select =  '<div class="mdl-textfield mdl-js-textfield mdl-textfield--fl
 
 homeworks = json.loads(open("homeworks.json").read())
 
-for homework in reversed(homeworks):
-	homework_select += '<option value="'+ homework["id"] +'">'+ str(homework["name"]) +'</option>'
+for homework_id in homeworks:
+	homework_select += '<option value="'+ homework_id +'">'+ str(homeworks[homework_id]["name"]) +'</option>'
 
 homework_select += '</select><label class="mdl-textfield__label">Homework</label></div>'
 

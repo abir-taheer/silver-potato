@@ -1,16 +1,1 @@
-{
-  "kmisquitta10":[
-      {
-          "name":"HW61",
-          "grade": null,
-          "max_points": 4,
-          "type": "hw"
-      },
-	  {
-		  "name":"HW62",
-		  "grade": 3,
-		  "max_points": 4,
-		  "type": "hw"
-	  }
-  ]
-}
+{"kmisquitta10": {"nh86ghyl0hlp5h3s": {"filename": "nh86ghyl0hlp5h3s-kmisquitta10-89lojz.txt", "time": "2019,06,14,00,49,31", "comments": "no too"}, "plkmokjn4rfg346g": {"filename": "plkmokjn4rfg346g-kmisquitta10-wsdg4n.txt", "time": "2019,06,14,00,48,05", "comments": "no"}}}

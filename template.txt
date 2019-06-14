@@ -31,7 +31,7 @@
       <a class="mdl-navigation__link" href="grades.py"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assessment</i>Grades</a>
 	  <!--signout-->
       <div class="mdl-layout-spacer"></div>
-      <a class="mdl-navigation__link" href="./schedule.py"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">access_time</i><span>Schedule</span></a>
+      <a class="mdl-navigation__link" target="_blank" href="http://bert.stuy.edu/pbrooks/schedules/schedules.py"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">access_time</i><span>Schedule</span></a>
     </nav>
   </div>
   <main class="mdl-layout__content">

@@ -1,12 +1,10 @@
-[
-	{
-		"id": "nh86ghyl0hlp5h3s",
+{
+	"nh86ghyl0hlp5h3s": {
 		"name": "HW61",
 		"due_date": "2019,06,14,08,00,00"
 	},
-	{
-		"id": "plkmokjn4rfg346g",
+	"plkmokjn4rfg346g": {
 		"name": "HW62",
 		"due_date": "2019,06,18,08,00,00"
 	}
-]
+}
