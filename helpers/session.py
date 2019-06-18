@@ -20,7 +20,7 @@ def get_user_id():
 	return existing_sessions[cookies.get_cookie("session")]["username"] if is_signed_in() else None
 
 def sign_in_card():
-	return web.center_content(material.new_standard_card("This Page Requires Sign In:", "<form id='login_form' action='login.py' method='post'>" + material.new_text_input("Username", "username") + material.new_text_input("Password", "password") + "</form>", material.new_standard_button("Login", {"onclick": "document.getElementById(\"login_form\").submit()"})))
+	return web.center_content(material.new_standard_card("This Page Requires Sign In:", "<form id='login_form' action='login.py' method='post'>" + material.new_text_input("Username", "username") + material.new_text_input("Password", "password", "", "password") + "</form>", material.new_standard_button("Login", {"onclick": "document.getElementById(\"login_form\").submit()"})))
 
 def sign_in_required():
 	if not is_signed_in():
